@@ -22,12 +22,36 @@ class User(db.Model):
         self.email = email
         self.password = password
 
-    def __repr__(self): return '<User %r>' % self.username
+    def __repr__(self):
+        return '<User %r>' % self.username
+
+
+class Product(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    product_name = db.Column(db.String(250), unique=False)
+    product_photo = db.Column(db.String, unique=False)
+    product_description = db.Column(db.Text, unique=False)
+
+    def __init__(self, product_name, product_photo, product_description):
+        self.product_name = product_name
+        self.product_photo = product_photo
+        self.product_description = product_description
+
+    def __repr__(self):
+        return '<Product %r>' % self.product_name
 
 
 @app.route('/')
+@app.route('/index')
 def index():
-    return render_template('index.html', title='Главная страница', time=time)
+    return render_template('index.html', title='Главная страница')
+
+
+@app.route('/product')
+def product():
+
+    product = Product.query.filter_by().all()
+    return render_template('product.html', title='Мои изделия', time=time, product=product)
 
 
 if __name__ == '__main__':
