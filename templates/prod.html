@@ -11,8 +11,15 @@
 
         <div class="card-body-main">
             <h1>{% block title %}{{ prod['product_name'] }}{% endblock %}</h1>
-            <h5 class="description">{{ prod['product_description'] }}</h5>
-            <h3 class="price">Цена: {{ prod['product_price'] }}</h3>
+        <div class="description">
+            <p>Артикул: <b>{{ prod['product_code'] }}</b></p>
+            <p >{{ prod['product_description'] }}</p>
+            <p>Размер: <b>{{ prod['product_size'] }} см </b></p>
+            <p>Вес: <b>{{ prod['product_weight'] }} гр </b></p>
+            <p>Материал: <b>{{ prod['product_material'] }}</b></p>
+            <p>Срок изготовления: <b>{{ prod['product_term'] }} дней</b></p>
+            <h3 class="price">Цена: {{ prod['product_price'] }} BYN</h3>
+        </div>
         </div>
     </div>
 

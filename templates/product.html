@@ -9,10 +9,10 @@
                 <h5 class="card-title">{{ prod['product_name'] }}</h5>
                 <a href="{{ url_for('prod', prod_id=prod['id']) }}"><img src="{{ prod['product_photo'] }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
-
-                    <p class="card-text">{{ prod['product_price'] }}</p>
+                    <a class="articul" href="{{ url_for('prod', prod_id=prod['id']) }}"><p class="card-text">Артикул: {{ prod['product_code'] }}</p></a>
+                    <p class="card-text">{{ prod['product_price'] }} BYN</p>
                     <hr>
-                    <a href="{{ url_for('prod', prod_id=prod['id']) }}" class="btn btn-secondary">Подробнее</a>
+{#                    <a href="{{ url_for('prod', prod_id=prod['id']) }}" class="btn btn-secondary">Подробнее</a>#}
                 </div>
 
             </div>

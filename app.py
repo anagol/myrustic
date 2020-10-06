@@ -25,6 +25,7 @@ class User(db.Model):
 
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    product_code = db.Column(db.String(20), unique=False)
     product_name = db.Column(db.String(250), unique=False)
     product_photo = db.Column(db.String, unique=False)
     product_description = db.Column(db.Text, unique=False)
@@ -34,8 +35,9 @@ class Product(db.Model):
     product_material = db.Column(db.String(200), unique=False)
     product_term = db.Column(db.String(200), unique=False)
 
-    def __init__(self, product_name, product_photo, product_description, product_price, product_size, product_weight,
+    def __init__(self, product_code, product_name, product_photo, product_description, product_price, product_size, product_weight,
                  product_material, product_term):
+        self.product_code = product_code
         self.product_name = product_name
         self.product_photo = product_photo
         self.product_description = product_description
@@ -58,7 +60,7 @@ def index():
 @app.route('/product')
 def product():
     product = Product.query.filter_by().all()
-    return render_template('product.html', title='Мои изделия', time=time, product=product)
+    return render_template('product.html', title='Мои изделия', product=product)
 
 
 @app.route('/<int:prod_id>')

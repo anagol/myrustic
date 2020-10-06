@@ -97,3 +97,8 @@ footer{
 .card-text{
     font-weight: 700;
 }
+
+.articul{
+    text-decoration: none;
+    color: black;
+}
