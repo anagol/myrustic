@@ -1,14 +1,11 @@
 from flask import Flask, redirect, render_template, url_for
-from datetime import datetime
+
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dbase.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-
-today = datetime.today()
-time = today.strftime("%d/%m/%Y")
 
 
 class User(db.Model):
@@ -32,12 +29,21 @@ class Product(db.Model):
     product_photo = db.Column(db.String, unique=False)
     product_description = db.Column(db.Text, unique=False)
     product_price = db.Column(db.String(20), unique=False)
+    product_size = db.Column(db.String(100), unique=False)
+    product_weight = db.Column(db.String(100), unique=False)
+    product_material = db.Column(db.String(200), unique=False)
+    product_term = db.Column(db.String(200), unique=False)
 
-    def __init__(self, product_name, product_photo, product_description, product_price):
+    def __init__(self, product_name, product_photo, product_description, product_price, product_size, product_weight,
+                 product_material, product_term):
         self.product_name = product_name
         self.product_photo = product_photo
         self.product_description = product_description
         self.product_price = product_price
+        self.product_size = product_size
+        self.product_weight = product_weight
+        self.product_material = product_material
+        self.product_term = product_term
 
     def __repr__(self):
         return '<Product %r>' % self.product_name
@@ -53,6 +59,12 @@ def index():
 def product():
     product = Product.query.filter_by().all()
     return render_template('product.html', title='Мои изделия', time=time, product=product)
+
+
+@app.route('/<int:prod_id>')
+def prod(prod_id):
+    prod = Product.query.filter_by(id=prod_id).one()
+    return render_template('prod.html', prod=prod)
 
 
 @app.route('/about')

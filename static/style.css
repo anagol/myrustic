@@ -5,6 +5,7 @@
 }
 body{
     text-align: center;
+    background-color: #fff8f8;
 }
 .card{
     display: inline-grid;
@@ -49,4 +50,50 @@ footer{
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+}
+
+.product{
+    column-width: 250px;
+	column-gap: 15px;
+    width: 100%;
+	max-width: 1600px;
+	margin: 10px auto;
+}
+.card:hover {
+	box-shadow: 0 0 20px rgba(60,59,139,0.9);;
+}
+
+.pic{
+    border-radius: 40px 0 0 40px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.prod_content{
+    display: flex;
+}
+
+.main_card{
+    width: 70%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 40px;
+}
+
+.description{
+    text-align: justify;
+
+}
+.card-body-main{
+    width: 50%;
+    padding: 20px;
+
+}
+
+.price{
+    color: #0910b3;
+}
+
+.card-text{
+    font-weight: 700;
 }

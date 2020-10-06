@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<title>{{ prod['product_name'] }}</title>
+
+{% block content %}
+
+<div class="main_card">
+    <div class="prod_content">
+        <div class="picture">
+            <img class="pic" src="{{ prod['product_photo'] }}" alt="...">
+        </div>
+
+        <div class="card-body-main">
+            <h1>{% block title %}{{ prod['product_name'] }}{% endblock %}</h1>
+            <h5 class="description">{{ prod['product_description'] }}</h5>
+            <h3 class="price">Цена: {{ prod['product_price'] }}</h3>
+        </div>
+    </div>
+
+</div>
+     <p class="list"><a href="{{ '/product' }}">К списку</a></p>
+{% endblock %}
