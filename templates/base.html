@@ -28,16 +28,26 @@
         <nav class="my-2 my-md-0 mr-md-3">
             <a class="p-2" href="{{ url_for('index') }}">Главная</a>
             <a class="p-2" href="{{ url_for('product') }}">Мои изделия</a>
-            <a class="p-2" href="#">Обо мне</a>
-            <a class="p-2" href="#">Доставка</a>
-            <a class="p-2" href="#">Оплата</a>
+            <a class="p-2" href="{{ url_for('about') }}">Обо мне</a>
+            <a class="p-2" href="{{ url_for('delivery') }}">Доставка</a>
+            <a class="p-2" href="{{ url_for('payment') }}">Оплата</a>
         </nav>
     </div>
 {% endblock %}
 {% block content %}
 
 {% endblock %}
+<footer>
+{#    <div class="admin">#}
+{#        <a href="#">Вход</a>#}
+{#    </div>#}
 
+
+    <div>
+        © 2020 Copyright: <a href="#">Anatoly Golosnoy</a>
+    </div>
+
+</footer>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
         integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
         crossorigin="anonymous"></script>

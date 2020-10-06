@@ -37,3 +37,16 @@ body{
 h1{
     margin: 20px;
 }
+
+img{
+    padding: 10px;
+}
+
+footer{
+    height: 70px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}

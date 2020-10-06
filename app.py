@@ -31,11 +31,13 @@ class Product(db.Model):
     product_name = db.Column(db.String(250), unique=False)
     product_photo = db.Column(db.String, unique=False)
     product_description = db.Column(db.Text, unique=False)
+    product_price = db.Column(db.String(20), unique=False)
 
-    def __init__(self, product_name, product_photo, product_description):
+    def __init__(self, product_name, product_photo, product_description, product_price):
         self.product_name = product_name
         self.product_photo = product_photo
         self.product_description = product_description
+        self.product_price = product_price
 
     def __repr__(self):
         return '<Product %r>' % self.product_name
@@ -49,9 +51,23 @@ def index():
 
 @app.route('/product')
 def product():
-
     product = Product.query.filter_by().all()
     return render_template('product.html', title='Мои изделия', time=time, product=product)
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html', title='Обо мне')
+
+
+@app.route('/delivery')
+def delivery():
+    return render_template('delivery.html', title='Доставка')
+
+
+@app.route('/payment')
+def payment():
+    return render_template('payment.html', title='Оплата')
 
 
 if __name__ == '__main__':
