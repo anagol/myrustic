@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{% block title %}{{ title }}{% endblock %}</h1>
+    {% for gst in guest %}
+        <div class="message">
+            <h3>{{ gst['name'] }}</h3>
+            <p>{{ gst['message'] }}</p>
+            <p>{{ gst['pub_date'] }}</p>
+        </div>
+
+    {% endfor %}
+
+    <h2>Оставьте свой отзыв</h2>
+
+    <form action="/guest" method="post">
+        <div class="form-group">
+            <label for="name" class="text-light">Ваше имя</label>
+            <input type="text" name="name" placeholder="Введите ваше имя" class="form-control"
+                   value="{{ request.form['name'] }}">
+        </div>
+        <div class="form-group">
+            <label for="message" class="text-light">Текст сообщения</label>
+            <textarea name='message' placeholder="Введите текст сообщения" class="form-control"
+                      rows="10">{{ request.form['message'] }}</textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+    </form>
+
+
+{% endblock %}

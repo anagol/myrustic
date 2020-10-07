@@ -120,3 +120,7 @@ footer {
 .btn {
     margin-top: 20px;
 }
+
+.admin a{
+    text-decoration: none;
+}
