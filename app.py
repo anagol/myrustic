@@ -92,6 +92,46 @@ def create_product():
     return render_template('create_product.html', title='Добавляем изделие')
 
 
+@app.route('/edit_product')
+def edit_product():
+    product = Product.query.all()
+    return render_template('edit_product.html', title='Редактируем', product=product)
+
+
+# @app.route('/edit')
+# def edit():
+#     return render_template('edit.html', title='Редактируем изделия')
+
+
+@app.route('/<int:id>/edit', methods=('GET', 'POST'))
+def edit(id):
+    prod = Product.query.get_or_404(id)
+    if request.method == 'POST':
+        prod.product_code = request.form["product_code"]
+        prod.product_name = request.form["product_name"]
+        prod.product_photo = request.form["product_photo"]
+        prod.product_description = request.form["product_description"]
+        prod.product_price = request.form["product_price"]
+        prod.product_size = request.form["product_size"]
+        prod.product_weight = request.form["product_weight"]
+        prod.product_material = request.form["product_material"]
+        prod.product_term = request.form["product_term"]
+        db.session.flush()
+        db.session.commit()
+        return redirect('/product')
+    else:
+        return render_template('edit.html', prod=prod)
+
+
+@app.route('/<int:id>/delete', methods=('POST',))
+def delete(id):
+    verse = Product.query.get_or_404(id)
+    db.session.delete(verse)
+    db.session.flush()
+    db.session.commit()
+    return redirect(url_for('product'))
+
+
 @app.route('/about')
 def about():
     return render_template('about.html', title='Обо мне')

@@ -1,49 +1,53 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     text-align: center;
     background-color: #fff8f8;
 }
-.card{
-    display: inline-grid;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin: 5px;
-  }
 
-.logo{
+.card {
+    display: inline-grid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+}
+
+.logo {
     margin-right: 30px;
 }
-.btn-social-icon{
+
+.btn-social-icon {
     margin-right: 10px;
 }
-.p-2{
+
+.p-2 {
     text-decoration: none;
     font-size: 20px;
     color: #000;
 }
 
 
-.my-2 a:hover{
+.my-2 a:hover {
     color: gray;
 
 }
 
-.btn-social-icon{
+.btn-social-icon {
     background-color: gray;
 }
 
-h1{
+h1 {
     margin: 20px;
 }
 
-img{
+img {
     padding: 10px;
 }
 
-footer{
+footer {
     height: 70px;
     background-color: lightgray;
     display: flex;
@@ -52,61 +56,67 @@ footer{
     margin-top: 50px;
 }
 
-.product{
+.product {
     column-width: 250px;
-	column-gap: 15px;
+    column-gap: 15px;
     width: 100%;
-	max-width: 1600px;
-	margin: 10px auto;
-}
-.card:hover {
-	box-shadow: 0 0 20px rgba(60,59,139,0.9);;
+    max-width: 1600px;
+    margin: 10px auto;
 }
 
-.pic{
+.card:hover {
+    box-shadow: 0 0 20px rgba(60, 59, 139, 0.9);;
+}
+
+.pic {
     border-radius: 40px 0 0 40px;
     width: 100%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.prod_content{
+.prod_content {
     display: flex;
 }
 
-.main_card{
+.main_card {
     width: 70%;
     margin: auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 40px;
 }
 
-.description{
+.description {
     text-align: justify;
 
 }
-.card-body-main{
+
+.card-body-main {
     width: 50%;
     padding: 20px;
 
 }
 
-.price{
+.price {
     color: #0910b3;
 }
 
-.card-text{
+.card-text {
     font-weight: 700;
 }
 
-.articul{
+.articul {
     text-decoration: none;
     color: black;
 }
 
-.product_form{
+.product_form {
     margin: 10px 110px 10px 110px;
 }
 
-.form-group button{
+.form-group button {
+    margin-top: 20px;
+}
+
+.btn {
     margin-top: 20px;
 }

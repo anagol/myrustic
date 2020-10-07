@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{{ title }}</h1>
+    <div>
+        {% for prod in product %}
+            <div class="card" style="width: 15rem;">
+                <h3>{{ prod['product_name'] }}</h3>
+                <h3>{{ prod['product_code'] }}</h3>
+                <img src="{{ prod['product_photo'] }}" class="card-img-top" alt="...">
+                <a href="{{ url_for('edit', id=prod['id']) }}">
+                    <h3>Редактировать</h3></a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
