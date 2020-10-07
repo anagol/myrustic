@@ -15,6 +15,16 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 
 
+@login_manager.user_loader
+def load_user(id):
+    return User.query.get(int(id))
+
+
+@app.errorhandler(401)
+def page_not_found(error):
+    return redirect(url_for('error_401'))
+
+
 # -----------------------Создаем базу данных-----------------------------------------------------------------
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -94,6 +104,7 @@ def prod(prod_id):
 
 # -----------------------Страница создания каждого изделия---------------------------------------------------
 @app.route('/create_product', methods=['GET', 'POST'])
+@login_required
 def create_product():
     if request.method == "POST":
         product_code = request.form["product_code"]
@@ -117,6 +128,7 @@ def create_product():
 
 # -----------------------Страница редактирования изделий-----------------------------------------------------
 @app.route('/edit_product')
+@login_required
 def edit_product():
     product = Product.query.all()
     return render_template('edit_product.html', title='Редактируем', product=product)
@@ -124,6 +136,7 @@ def edit_product():
 
 # -----------------------Страница редактирования каждого изделия---------------------------------------------
 @app.route('/<int:id>/edit', methods=('GET', 'POST'))
+@login_required
 def edit(id):
     prod = Product.query.get_or_404(id)
     if request.method == 'POST':
@@ -145,6 +158,7 @@ def edit(id):
 
 # -----------------------Функционал удаления отдельного изделия----------------------------------------------
 @app.route('/<int:id>/delete', methods=('POST',))
+@login_required
 def delete(id):
     verse = Product.query.get_or_404(id)
     db.session.delete(verse)
@@ -188,6 +202,7 @@ def guest():
 
 # -----------------------Страница редактирования отзывов-----------------------------------------------------
 @app.route('/guest_edit')
+@login_required
 def guest_edit():
     guest = Guest.query.all()
     return render_template('guest_edit.html', title='Редактируем гостевую книгу', guest=guest)
@@ -204,6 +219,7 @@ def guest_delete(id):
 
 # -----------------------Страница администратора-------------------------------------------------------------
 @app.route('/admin')
+@login_required
 def admin():
     return render_template('admin.html', title='Страница администратора')
 
@@ -248,6 +264,11 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+
+@app.route('/error_401')
+def error_401():
+    return render_template('401.html', title='ОШИБКА 401')
 
 
 if __name__ == '__main__':
