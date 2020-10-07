@@ -13,13 +13,15 @@
 
 </head>
 <body>
+
 {% block nav %}
+    <div class="top"></div>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
         <a href="{{ url_for('index') }}"><img class="logo" src="/static/hd.svg" alt="" height="100"></a>
         <div class="social">
-            <a class="btn btn-social-icon btn-facebook">
+            <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/anatoli.halasny">
                 <span class="fa fa-facebook"></span>
-                <a class="btn btn-social-icon btn-instagram">
+                <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/anagol69/">
                     <span class="fa fa-instagram"></span>
                 </a>
             </a>
@@ -31,29 +33,30 @@
             <a class="p-2" href="{{ url_for('product') }}">Мои изделия</a>
             <a class="p-2" href="{{ url_for('guest') }}">Отзывы</a>
             <a class="p-2" href="{{ url_for('about') }}">Обо мне</a>
-            <a class="p-2" href="{{ url_for('delivery') }}">Доставка</a>
-            <a class="p-2" href="{{ url_for('payment') }}">Оплата</a>
+            <a class="p-2" href="{{ url_for('delivery') }}">Доставка и оплата</a>
         </nav>
+
     </div>
+    <div class="top"></div>
 {% endblock %}
+
 <div class="container">
     {% for message in get_flashed_messages() %}
         <div class="alert alert-danger">{{ message }}</div>
     {% endfor %}
-{% block content %}
-
-{% endblock %}
+    {% block content %}
+    {% endblock %}
+</div>
 <footer>
     <div class="admin">
         <a href="{{ url_for('login') }}">Вход</a>
     </div>
-
-
-    <div>
+    <div class="admin">
         © 2020 Copyright: <a href="{{ url_for('admin') }}">Anatoly Golosnoy</a>
     </div>
-
 </footer>
+
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
         integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
         crossorigin="anonymous"></script>

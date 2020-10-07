@@ -13,15 +13,15 @@
     <h2>Оставьте свой отзыв</h2>
 
     <form action="/guest" method="post">
-        <div class="form-group">
+        <div class="form-group col-sm-6">
             <label for="name" class="text-light">Ваше имя</label>
-            <input type="text" name="name" placeholder="Введите ваше имя" class="form-control"
+            <input type="text" name="name" required placeholder="Введите ваше имя" class="form-control"
                    value="{{ request.form['name'] }}">
         </div>
-        <div class="form-group">
+        <div class="form-group col-sm-6">
             <label for="message" class="text-light">Текст сообщения</label>
-            <textarea name='message' placeholder="Введите текст сообщения" class="form-control"
-                      rows="10">{{ request.form['message'] }}</textarea>
+            <textarea name='message' required placeholder="Введите текст сообщения" class="form-control"
+                      rows="4">{{ request.form['message'] }}</textarea>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Отправить</button>

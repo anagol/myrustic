@@ -1,7 +1,6 @@
 from flask import Flask, redirect, render_template, url_for, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
-from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
 
@@ -177,12 +176,6 @@ def about():
 @app.route('/delivery')
 def delivery():
     return render_template('delivery.html', title='Доставка')
-
-
-# -----------------------Страница "Оплата"-------------------------------------------------------------------
-@app.route('/payment')
-def payment():
-    return render_template('payment.html', title='Оплата')
 
 
 # -----------------------Страница "Отзывы"-------------------------------------------------------------------
