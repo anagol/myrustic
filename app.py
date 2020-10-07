@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, url_for
+from flask import Flask, redirect, render_template, url_for, request
 
 from flask_sqlalchemy import SQLAlchemy
 
@@ -35,7 +35,8 @@ class Product(db.Model):
     product_material = db.Column(db.String(200), unique=False)
     product_term = db.Column(db.String(200), unique=False)
 
-    def __init__(self, product_code, product_name, product_photo, product_description, product_price, product_size, product_weight,
+    def __init__(self, product_code, product_name, product_photo, product_description, product_price, product_size,
+                 product_weight,
                  product_material, product_term):
         self.product_code = product_code
         self.product_name = product_name
@@ -67,6 +68,28 @@ def product():
 def prod(prod_id):
     prod = Product.query.filter_by(id=prod_id).one()
     return render_template('prod.html', prod=prod)
+
+
+@app.route('/create_product', methods=['GET', 'POST'])
+def create_product():
+    if request.method == "POST":
+        product_code = request.form["product_code"]
+        product_name = request.form["product_name"]
+        product_photo = request.form["product_photo"]
+        product_description = request.form["product_description"]
+        product_price = request.form["product_price"]
+        product_size = request.form["product_size"]
+        product_weight = request.form["product_weight"]
+        product_material = request.form["product_material"]
+        product_term = request.form["product_term"]
+        prod = Product(product_code=product_code, product_name=product_name, product_photo=product_photo,
+                       product_description=product_description, product_price=product_price, product_size=product_size,
+                       product_weight=product_weight, product_material=product_material, product_term=product_term)
+        db.session.add(prod)
+        db.session.flush()
+        db.session.commit()
+        return redirect(url_for('product'))
+    return render_template('create_product.html', title='Добавляем изделие')
 
 
 @app.route('/about')

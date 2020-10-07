@@ -102,3 +102,11 @@ footer{
     text-decoration: none;
     color: black;
 }
+
+.product_form{
+    margin: 10px 110px 10px 110px;
+}
+
+.form-group button{
+    margin-top: 20px;
+}
