@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     display: inline-grid;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin: 5px;
+    text-align: center;
 }
 
 .logo {
@@ -46,6 +48,12 @@ body {
     background-color: gray;
 }
 
+.social{
+    display: flex;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    }
+
 h1 {
     margin: 20px;
     text-align: center;
@@ -57,7 +65,7 @@ img {
 
 footer {
     width: 100%;
-    height: 370px;
+    height:70px;
     background-color: #BABFD1;
     display: flex;
     align-items: center;
@@ -159,4 +167,10 @@ footer {
     opacity: 0.8;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.list{
+    text-align: center;
+    font-weight: 500;
+
 }
