@@ -8,7 +8,7 @@
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/bootstrap-social.css">
-    <link rel="shortcut icon" href="/static/hd.png" type="image/png">
+    <link rel="shortcut icon" href="/static/Halasny.png" type="image/png">
     <title>{% block title %}{{ title }}{% endblock %}</title>
 
 </head>
@@ -19,15 +19,15 @@
 
     </div>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <a href="{{ url_for('index') }}"><img class="logo" src="/static/hd.svg" alt="" height="100"></a>
+        <a href="{{ url_for('index') }}"><img class="logo" src="/static/Halasny.png" alt="" height="150"></a>
 
         <h5 class="my-0 mr-md-auto font-weight-normal">Ремесленник Анатолий Голосной</h5>
 
         <nav class="my-2 my-md-0 mr-md-3">
             <a class="p-2" href="{{ url_for('index') }}">Главная</a>
-            <a class="p-2" href="{{ url_for('product') }}">Мои изделия</a>
-            <a class="p-2" href="{{ url_for('guest') }}">Отзывы</a>
-            <a class="p-2" href="{{ url_for('about') }}">Обо мне</a>
+            <a class="p-2" href="{{ url_for('product') }}">Наши изделия</a>
+            <a class="p-2" href="{{ url_for('guest') }}">Гостевая книга</a>
+            <a class="p-2" href="{{ url_for('about') }}">О нас</a>
             <a class="p-2" href="{{ url_for('delivery') }}">Доставка и оплата</a>
         </nav>
 

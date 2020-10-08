@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica, serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -148,12 +148,9 @@ footer {
 
 .message {
     width: 50%;
-
     margin-bottom: 40px;
-
     background-color: whitesmoke;
     opacity: 0.6;
-
     text-align: center;
 
 }
@@ -185,4 +182,11 @@ footer {
 .wooden_door img{
     width: 100%;
     height: auto;
+}
+
+.pay{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
 }

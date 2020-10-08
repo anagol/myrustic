@@ -2,12 +2,13 @@
 {% block content %}
     <h1>{% block title %}{{ title }}{% endblock %}</h1>
     {% for gst in guest %}
-        <div class="message">
+        <hr>
+        <div class="new_message">
             <h3>{{ gst['name'] }}</h3>
             <p>{{ gst['message'] }}</p>
             <p>{{ gst['pub_date'] }}</p>
         </div>
-
+        <hr>
     {% endfor %}
 
     <h2>Оставьте свой отзыв</h2>
