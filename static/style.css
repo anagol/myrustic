@@ -44,10 +44,6 @@ body {
 
 }
 
-.btn-social-icon {
-    background-color: gray;
-}
-
 .social{
     display: flex;
     margin-left: 50px;
@@ -93,6 +89,7 @@ footer {
 
 .prod_content {
     display: flex;
+    margin-top: 20px;
 }
 
 .main_card {
@@ -110,6 +107,7 @@ footer {
 .card-body-main {
     width: 50%;
     padding: 20px;
+
 
 }
 
@@ -172,5 +170,8 @@ footer {
 .list{
     text-align: center;
     font-weight: 500;
-
+    margin-top: 10px;
+}
+.list a{
+    color: #2d4373;
 }
