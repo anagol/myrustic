@@ -13,9 +13,11 @@
 
 </head>
 <body>
-
+<header>
 {% block nav %}
-    <div class="top"></div>
+    <div class="top">
+
+    </div>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
         <a href="{{ url_for('index') }}"><img class="logo" src="/static/hd.svg" alt="" height="100"></a>
 
@@ -32,7 +34,7 @@
     </div>
     <div class="top"></div>
 {% endblock %}
-
+</header>
 <div class="container">
     {% for message in get_flashed_messages() %}
         <div class="alert alert-danger">{{ message }}</div>

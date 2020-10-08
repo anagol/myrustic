@@ -2,11 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Helvetica, serif;
 }
 
 body {
-
     background-color: #fff8f8;
     min-height: 100%;
     position: relative;
@@ -174,4 +173,16 @@ footer {
 }
 .list a{
     color: #2d4373;
+}
+
+.wooden_door{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: justify;
+
+}
+
+.wooden_door img{
+    width: 100%;
+    height: auto;
 }
