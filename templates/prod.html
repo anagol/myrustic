@@ -10,8 +10,9 @@
         </div>
 
         <div class="card-body-main">
-            <h1>{% block title %}{{ prod['product_name'] }}{% endblock %}</h1>
+
         <div class="description">
+            <h2>{% block title %}{{ prod['product_name'] }}{% endblock %}</h2>
             <p>Артикул: <b>{{ prod['product_code'] }}</b></p>
             <p >{{ prod['product_description'] }}</p>
             <p>Размер: <b>{{ prod['product_size'] }} см </b></p>

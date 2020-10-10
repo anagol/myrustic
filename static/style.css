@@ -205,3 +205,9 @@ footer {
     margin-top: 15px;
     background-color: #cac8b4;
 }
+
+.description h2{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
