@@ -4,10 +4,12 @@ from sqlalchemy import func
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'anatolihalasny1969'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dbase.db'
+app.config[
+    'SQLALCHEMY_DATABASE_URI'] = 'postgres://aziveibtbozkbs' \
+                                 ':00213dc440bbea72e2bf91df6b64b1d5765c52c9def5e5e04a76f4aa81a0d4d1@ec2-54-217-213-79' \
+                                 '.eu-west-1.compute.amazonaws.com:5432/d8ei5c1vou2be0 '
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 login_manager = LoginManager()
