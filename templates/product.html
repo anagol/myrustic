@@ -5,7 +5,7 @@
 
     <div class="product">
         {% for prod in product %}
-            <div class="card" style="width: 20rem;">
+            <div class="card" style="width: 18rem;">
                 <h5 class="card-title">{{ prod['product_name'] }}</h5>
                 <a href="{{ url_for('prod', prod_id=prod['id']) }}"><img src="{{ prod['product_photo'] }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">

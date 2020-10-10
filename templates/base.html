@@ -55,7 +55,6 @@
             <nav class="my-2 my-md-0 mr-md-3">
                 <a class="p-2" href="{{ url_for('index') }}">Главная</a>
                 <a class="p-2" href="{{ url_for('product') }}">Мои изделия</a>
-                <a class="p-2" href="{{ url_for('guest') }}">Гостевая книга</a>
                 <a class="p-2" href="{{ url_for('about') }}">Обо мне</a>
                 <a class="p-2" href="{{ url_for('delivery') }}">Доставка и оплата</a>
             </nav>
@@ -73,7 +72,7 @@
 </div>
 <footer>
     <div class="admin">
-        <a href="{{ url_for('login') }}">Вход</a>
+{#        <a href="{{ url_for('login') }}">Вход</a>#}
         © 2020 Copyright: <a href="{{ url_for('admin') }}">Anatoly Golosnoy</a>
     </div>
 

@@ -178,38 +178,6 @@ def delivery():
     return render_template('delivery.html', title='Доставка и оплата')
 
 
-# -----------------------Страница "Отзывы"-------------------------------------------------------------------
-@app.route('/guest', methods=['GET', 'POST'])
-def guest():
-    guest = Guest.query.all()
-    if request.method == "POST":
-        name = request.form["name"]
-        message = request.form["message"]
-        guest = Guest(name=name, message=message)
-        db.session.add(guest)
-        db.session.flush()
-        db.session.commit()
-        return redirect(url_for('guest'))
-    return render_template('guest.html', title='Гостевая книга', guest=guest)
-
-
-# -----------------------Страница редактирования отзывов-----------------------------------------------------
-@app.route('/guest_edit')
-@login_required
-def guest_edit():
-    guest = Guest.query.all()
-    return render_template('guest_edit.html', title='Редактируем гостевую книгу', guest=guest)
-
-
-@app.route('/<int:id>/guest_delete', methods=('POST',))
-def guest_delete(id):
-    guest = Guest.query.get_or_404(id)
-    db.session.delete(guest)
-    db.session.flush()
-    db.session.commit()
-    return redirect(url_for('guest_edit'))
-
-
 # -----------------------Страница администратора-------------------------------------------------------------
 @app.route('/admin')
 @login_required
