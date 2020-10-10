@@ -66,20 +66,6 @@ class Product(db.Model):
         return '<Product %r>' % self.product_name
 
 
-class Guest(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    pub_date = db.Column(db.DateTime(timezone=True), nullable=False, default=func.current_timestamp())
-    name = db.Column(db.String(80))
-    message = db.Column(db.Text)
-
-    def __init__(self, name, message):
-        self.name = name
-        self.message = message
-
-    def __repr__(self):
-        return '<Name %r >' % self.name
-
-
 # ------------------------Главная страница-------------------------------------------------------------------
 @app.route('/')
 @app.route('/index')
