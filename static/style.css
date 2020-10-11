@@ -215,4 +215,6 @@ footer {
 .card-title{
     margin-top: 15px;
     font-weight: 700;
+    margin-left: 5px;
+    margin-right: 5px;
 }
