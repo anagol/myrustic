@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords"
+          content="Каталог предметов декора для интерьера, Wood, каталог товаров, хендмейд декор, таблички из дерева,
+          украшения, панно, панно на стену, часы настенные, часы на стену, рустик, rustic, halasny, ремесленник,
+           чайные домики, подставки под кружки, изделия из дерева, подарки">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
           integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -10,15 +14,19 @@
     <link rel="stylesheet" href="/static/bootstrap-social.css">
     <link rel="shortcut icon" href="/static/Halasny.png" type="image/png">
     <title>{% block title %}{{ title }}{% endblock %}</title>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180254129-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180254129-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-180254129-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180254129-1');
+    </script>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -72,7 +80,7 @@
 </div>
 <footer>
     <div class="admin">
-{#        <a href="{{ url_for('login') }}">Вход</a>#}
+        {#        <a href="{{ url_for('login') }}">Вход</a>#}
         © 2020 Copyright: <a href="{{ url_for('admin') }}">Anatoly Golosnoy</a>
     </div>
 
