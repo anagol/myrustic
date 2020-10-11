@@ -6,8 +6,8 @@
           content="Каталог предметов декора для интерьера, Wood, каталог товаров, хендмейд декор, таблички из дерева,
           украшения, панно, панно на стену, часы настенные, часы на стену, рустик, rustic, halasny, ремесленник,
            чайные домики, подставки под кружки, изделия из дерева, подарки">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
-          integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/style.css">
@@ -53,21 +53,54 @@
 <body>
 <header>
     {% block nav %}
-        <div class="top">
+        <div class="top"></div>
+        <!--Navbar -->
+        <nav class="mb-1 navbar navbar-expand-lg lighten-1 navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent-555"
+                    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">Главная
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('product') }}">Мои изделия</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('delivery') }}">Доставка и оплата</a>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="{{ url_for('index') }}"><img class="logo" src="/static/Halasny.png"
+                                                                                         alt=""></a>
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="{{ url_for('product') }}">
+                            <p>Ремесленник Анатолий Голосной</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav social">
+                    <li class="nav-item">
+                        <a class="btn btn-social-icon btn-facebook"
+                           href="https://www.facebook.com/anatoli.halasny">
+                            <span class="fa fa-facebook"></span></a>
+                        <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/anagol69/">
+                            <span class="fa fa-instagram"></span>
+                        </a>
 
-        </div>
-        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3  border-bottom shadow-sm">
-            <a href="{{ url_for('index') }}"><img class="logo" src="/static/Halasny.png" alt="" height="150"></a>
-            <h5 class="my-0 mr-md-auto font-weight-normal"><b>Ремесленник Анатолий Голосной</b></h5>
-
-            <nav class="my-2 my-md-0 mr-md-3">
-                <a class="p-2" href="{{ url_for('index') }}">Главная</a>
-                <a class="p-2" href="{{ url_for('product') }}">Мои изделия</a>
-                <a class="p-2" href="{{ url_for('about') }}">Контакты</a>
-                <a class="p-2" href="{{ url_for('delivery') }}">Доставка и оплата</a>
-            </nav>
-
-        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--/.Navbar -->
         <div class="top"></div>
     {% endblock %}
 </header>
@@ -80,28 +113,20 @@
 </div>
 <footer>
     <div class="admin">
-        {#        <a href="{{ url_for('login') }}">Вход</a>#}
-        © 2020 Copyright: <a href="{{ url_for('admin') }}">Anatoly Golosnoy</a>
+        <a href="{{ url_for('admin') }}">Anatoly Golosnoy</a>
     </div>
 
-    <div class="social">
-        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/anatoli.halasny">
-            <span class="fa fa-facebook"></span></a>
-        <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/anagol69/">
-            <span class="fa fa-instagram"></span>
-        </a>
-    </div>
 </footer>
 
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
-        integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
-        integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.esm.min.js"
-        integrity="sha384-Eg5XYZrb+x0FMnsSAcaUNc6vJ/6B47jQvyhan3IGKcCfko9Hq6vS3s1PviSpNbdE"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
 </html>
