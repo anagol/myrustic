@@ -1,9 +1,7 @@
 from flask import Flask, redirect, render_template, url_for, request, flash
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import func
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
-import psycopg2
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'anatolihalasny1969'

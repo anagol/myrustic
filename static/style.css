@@ -154,7 +154,7 @@ footer {
 }
 
 .about {
-
+    background-image: url("172.jpg");
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -184,18 +184,6 @@ footer {
 }
 .list a{
     color: #2d4373;
-}
-
-.wooden_door{
-    display: flex;
-    justify-content: space-evenly;
-    text-align: justify;
-
-}
-
-.wooden_door img{
-    width: 100%;
-    height: auto;
 }
 
 .pay{
