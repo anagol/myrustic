@@ -162,16 +162,12 @@ footer {
 .message {
     width: 50%;
     margin-bottom: 40px;
-    background-color: whitesmoke;
-    opacity: 0.6;
     text-align: center;
 
 }
 
 .check {
     text-align: center;
-    background-color: whitesmoke;
-    opacity: 0.8;
     margin-top: 20px;
     margin-bottom: 20px;
 }
