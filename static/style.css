@@ -10,6 +10,11 @@
     font-family: Cargo;
     src: url('/static/fonts/Cargo.ttf') format('truetype');
 }
+@font-face {
+    font-family: USSR_Army;
+    src: url('/static/fonts/USSR_Army.ttf') format('truetype');
+}
+
 body {
     background-color: #D8D3CA;
     min-height: 100%;
@@ -237,6 +242,7 @@ footer {
 }
 
 .halasny{
-    font-family: Cargo, serif;
-    font-weight: 300;
+    font-family: USSR_Army, sans-serif;
+    font-weight: 500;
+    font-size: 80px;
 }
