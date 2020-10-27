@@ -11,10 +11,9 @@
     src: url('/static/fonts/Cargo.ttf') format('truetype');
 }
 @font-face {
-    font-family: USSR_Army;
-    src: url('/static/fonts/USSR_Army.ttf') format('truetype');
+    font-family: Cargo;
+    src: url('/static/fonts/Cargo.otf') format('opentype');
 }
-
 body {
     background-color: #D8D3CA;
     min-height: 100%;
