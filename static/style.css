@@ -6,7 +6,10 @@
     color: #4F5242;
 
 }
-
+@font-face {
+    font-family: Cargo;
+    src: url('/static/fonts/Cargo.ttf') format('truetype');
+}
 body {
     background-color: #D8D3CA;
     min-height: 100%;
@@ -231,4 +234,9 @@ footer {
 .wooden_door img{
     width: 100%;
     height: auto;
+}
+
+.halasny{
+    font-family: Cargo, serif;
+    font-weight: 300;
 }
