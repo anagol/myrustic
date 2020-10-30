@@ -240,4 +240,11 @@ footer {
     font-family: "Cargo", serif;
     font-weight: 300;
     font-size: 60px;
+
+}
+.asortiment{
+    text-align: center;
+    color: #308626;
+    font-style: italic;
+    font-weight: 700;
 }
