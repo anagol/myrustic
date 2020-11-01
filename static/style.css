@@ -75,8 +75,9 @@ h1 {
 
 img {
     padding: 10px;
+    width: 80%;
+    height: auto;
 }
-
 footer {
     width: 100%;
     height:70px;
@@ -129,6 +130,7 @@ footer {
 
 .price {
     color: #4F5242;
+    font-size: 3vw;
 }
 
 .card-text {
@@ -154,6 +156,7 @@ footer {
 
 .admin a {
     text-decoration: none;
+    font-size: 1vw;
 }
 
 .about {
@@ -173,6 +176,11 @@ footer {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.check img{
+    width: 70%;
+    height: auto;
 }
 
 .list{
@@ -201,10 +209,12 @@ footer {
     background-color: #cac8b4;
 }
 
-.description h2{
+h2{
     text-align: center;
     font-weight: 700;
+    margin-top:30px;
     margin-bottom: 30px;
+    font-size: 3vw;
 }
 
 .card-title{
@@ -239,7 +249,7 @@ footer {
 .halasny{
     font-family: "Cargo", serif;
     font-weight: 300;
-    font-size: 60px;
+    font-size: 4vw;
 
 }
 .asortiment{
@@ -247,4 +257,13 @@ footer {
     color: #308626;
     font-style: italic;
     font-weight: 700;
+    font-size: 2vw;
+}
+
+p{
+    font-size: 1vw;
+}
+
+h3, h4, h5{
+    font-size: 2vw;
 }
