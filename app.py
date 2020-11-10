@@ -75,7 +75,7 @@ def index():
 @app.route('/product')
 def product():
     product = Product.query.filter_by().all()
-    return render_template('product.html', title='Мои изделия', product=product)
+    return render_template('product.html', title='Наши изделия', product=product)
 
 
 # -----------------------Создаем общую страницу каждого изделиями--------------------------------------------
