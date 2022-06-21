@@ -243,6 +243,7 @@ footer {
     font-family: "Cargo", serif;
     font-weight: 300;
     font-size: 60px;
+    text-align: center;
 
 }
 .asortiment{
@@ -250,4 +251,7 @@ footer {
     color: #308626;
     font-style: italic;
     font-weight: 700;
+}
+.wooden_door{
+    text-align: center;
 }
