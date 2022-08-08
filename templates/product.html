@@ -1,25 +1,25 @@
-{% extends 'base.html' %}
-
-{% block content %}
-    <h1>{{ title }}</h1>
-    <div class="product">
-        {% for prod in product %}
-            <div class="card" style="width: 15rem;">
-               <h5 class="card-title">{{ prod['product_name'] }}</h5>
-                 <hr>
-                <a href="{{ url_for('prod', prod_id=prod['id']) }}"><img src="{{ prod['product_photo'] }}" class="card-img-top" alt="..."></a>
-                <div class="card-body">
-                    <a class="articul" href="{{ url_for('prod', prod_id=prod['id']) }}"><p class="card-text">Артикул: {{ prod['product_code'] }}</p></a>
-                    <p class="card-text">{{ prod['product_price'] }} BYN</p>
-                    <hr>
-                    <a href="{{ url_for('prod', prod_id=prod['id']) }}" class="btn btn-secondary">Подробнее</a>
-                </div>
-
-            </div>
-
-
-
-        {% endfor %}
-    </div>
-
-{% endblock %}
+{#{% extends 'base.html' %}#}
+{##}
+{#{% block content %}#}
+{#    <h1>{{ title }}</h1>#}
+{#    <div class="product">#}
+{#        {% for prod in product %}#}
+{#            <div class="card" style="width: 15rem;">#}
+{#               <h5 class="card-title">{{ prod['product_name'] }}</h5>#}
+{#                 <hr>#}
+{#                <a href="{{ url_for('prod', prod_id=prod['id']) }}"><img src="{{ prod['product_photo'] }}" class="card-img-top" alt="..."></a>#}
+{#                <div class="card-body">#}
+{#                    <a class="articul" href="{{ url_for('prod', prod_id=prod['id']) }}"><p class="card-text">Артикул: {{ prod['product_code'] }}</p></a>#}
+{#                    <p class="card-text">{{ prod['product_price'] }} BYN</p>#}
+{#                    <hr>#}
+{#                    <a href="{{ url_for('prod', prod_id=prod['id']) }}" class="btn btn-secondary">Подробнее</a>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{##}
+{##}
+{##}
+{#        {% endfor %}#}
+{#    </div>#}
+{##}
+{#{% endblock %}#}
