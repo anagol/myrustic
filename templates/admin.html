@@ -1,7 +1,7 @@
-{#{% extends 'base.html' %}#}
-{#{% block content %}#}
-{#<h1>{{ title }}</h1>#}
-{#    <h3 class="admin"><a href="{{ url_for('create_product') }}">Создать товар</a></h3>#}
-{#    <h3 class="admin"><a href="{{ url_for('edit_product') }}">Редактировать товар</a></h3>#}
-{#    <h3 class="admin"><a href="{{ url_for('index') }}">Выход</a></h3>#}
-{#{% endblock %}#}
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ title }}</h1>
+    <h3 class="admin"><a href="{{ url_for('create_product') }}">Создать товар</a></h3>
+    <h3 class="admin"><a href="{{ url_for('edit_product') }}">Редактировать товар</a></h3>
+    <h3 class="admin"><a href="{{ url_for('index') }}">Выход</a></h3>
+{% endblock %}

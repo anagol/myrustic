@@ -1,63 +1,63 @@
-{#{% extends 'base.html' %}#}
-{#{% block content %}#}
-{#    <h1>{% block title %}Редактируем "{{ prod['product_name'] }}"{% endblock %}</h1>#}
-{#    <div class="product_form">#}
-{#        <form method="post">#}
-{#            <div class="form-group">#}
-{#                <label for="product_code" class="text-light">Артикул изделия</label>#}
-{#                <input type="text" name="product_code" placeholder="Введите артикул изделия" class="form-control"#}
-{#                       value="{{ request.form['product_code'] or prod['product_code'] }}">#}
-{#            </div>#}
-{#            <div class="form-group">#}
-{#                <label for="product_name" class="text-light">Название изделия</label>#}
-{#                <input type="text" name="product_name" placeholder="Введите название изделия" class="form-control"#}
-{#                       value="{{ request.form['product_name'] or prod['product_name'] }}">#}
-{#            </div>#}
-{#            <div class="form-group">#}
-{#                <label for="product_photo" class="text-light">Фотография изделия</label>#}
-{#                <input type="text" name="product_photo" placeholder="Добавьте URL фотографии изделия"#}
-{#                       class="form-control"#}
-{#                       value="{{ request.form['product_photo'] or prod['product_photo'] }}">#}
-{#            </div>#}
-{#            <div class="form-group">#}
-{#                <label for="product_description" class="text-light">Описание изделия</label>#}
-{#                <textarea name='product_description' placeholder="Введите описание изделия" class="form-control"#}
-{#                          rows="10">{{ request.form['product_description'] or prod['product_description'] }}</textarea>#}
-{#            </div>#}
-{#            <div class="form-group">#}
-{#                <label for="product_price" class="text-light">Цена изделия</label>#}
-{#                <input type="text" name="product_price" placeholder="Введите цену изделия" class="form-control"#}
-{#                       value="{{ request.form['product_price'] or prod['product_price'] }}">#}
-{#            </div>#}
-{#            <div class="form-group">#}
-{#                <label for="product_size" class="text-light">Размер изделия</label>#}
-{#                <input type="text" name="product_size" placeholder="Введите размеры изделия" class="form-control"#}
-{#                       value="{{ request.form['product_size'] or prod['product_size'] }}">#}
-{#            </div>#}
-{#            <div class="form-group">#}
-{#                <label for="product_weight" class="text-light">Вес изделия</label>#}
-{#                <input type="text" name="product_weight" placeholder="Введите вес изделия" class="form-control"#}
-{#                       value="{{ request.form['product_weight'] }}">#}
-{#            </div>#}
-{#            <div class="form-group">#}
-{#                <label for="product_material" class="text-light">Материал изделия</label>#}
-{#                <input type="text" name="product_material" placeholder="Введите материал изделия" class="form-control"#}
-{#                       value="{{ request.form['product_material'] or prod['product_material'] }}">#}
-{#            </div>#}
-{#            <div class="form-group">#}
-{#                <label for="product_term" class="text-light">Срок изготовления изделия</label>#}
-{#                <input type="text" name="product_term" placeholder="Введите срок изготовления изделия"#}
-{#                       class="form-control"#}
-{#                       value="{{ request.form['product_term'] or prod['product_term'] }}">#}
-{#            </div>#}
-{#            <div class="form-group">#}
-{#                <button type="submit" class="btn btn-primary">Записать</button>#}
-{#            </div>#}
-{#        </form>#}
-{#        <form action="{{ url_for('delete', id=prod['id']) }}" method="post">#}
-{#            <input type="submit" value="Удалить изделие"#}
-{#                   class="btn btn-danger btn-sm"#}
-{#                   onclick="return confirm('Вы действительно хотите удалить этот стих?')">#}
-{#        </form>#}
-{#    </div>#}
-{#{% endblock %}#}
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{% block title %}Редактируем "{{ prod['product_name'] }}"{% endblock %}</h1>
+    <div class="product_form">
+        <form method="post">
+            <div class="form-group">
+                <label for="product_code" class="text-light">Артикул изделия</label>
+                <input type="text" name="product_code" placeholder="Введите артикул изделия" class="form-control"
+                       value="{{ request.form['product_code'] or prod['product_code'] }}">
+            </div>
+            <div class="form-group">
+                <label for="product_name" class="text-light">Название изделия</label>
+                <input type="text" name="product_name" placeholder="Введите название изделия" class="form-control"
+                       value="{{ request.form['product_name'] or prod['product_name'] }}">
+            </div>
+            <div class="form-group">
+                <label for="product_photo" class="text-light">Фотография изделия</label>
+                <input type="text" name="product_photo" placeholder="Добавьте URL фотографии изделия"
+                       class="form-control"
+                       value="{{ request.form['product_photo'] or prod['product_photo'] }}">
+            </div>
+            <div class="form-group">
+                <label for="product_description" class="text-light">Описание изделия</label>
+                <textarea name='product_description' placeholder="Введите описание изделия" class="form-control"
+                          rows="10">{{ request.form['product_description'] or prod['product_description'] }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="product_price" class="text-light">Цена изделия</label>
+                <input type="text" name="product_price" placeholder="Введите цену изделия" class="form-control"
+                       value="{{ request.form['product_price'] or prod['product_price'] }}">
+            </div>
+            <div class="form-group">
+                <label for="product_size" class="text-light">Размер изделия</label>
+                <input type="text" name="product_size" placeholder="Введите размеры изделия" class="form-control"
+                       value="{{ request.form['product_size'] or prod['product_size'] }}">
+            </div>
+            <div class="form-group">
+                <label for="product_weight" class="text-light">Вес изделия</label>
+                <input type="text" name="product_weight" placeholder="Введите вес изделия" class="form-control"
+                       value="{{ request.form['product_weight'] }}">
+            </div>
+            <div class="form-group">
+                <label for="product_material" class="text-light">Материал изделия</label>
+                <input type="text" name="product_material" placeholder="Введите материал изделия" class="form-control"
+                       value="{{ request.form['product_material'] or prod['product_material'] }}">
+            </div>
+            <div class="form-group">
+                <label for="product_term" class="text-light">Срок изготовления изделия</label>
+                <input type="text" name="product_term" placeholder="Введите срок изготовления изделия"
+                       class="form-control"
+                       value="{{ request.form['product_term'] or prod['product_term'] }}">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Записать</button>
+            </div>
+        </form>
+        <form action="{{ url_for('delete', id=prod['id']) }}" method="post">
+            <input type="submit" value="Удалить изделие"
+                   class="btn btn-danger btn-sm"
+                   onclick="return confirm('Вы действительно хотите удалить этот стих?')">
+        </form>
+    </div>
+{% endblock %}
