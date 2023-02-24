@@ -6,7 +6,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'anatolihalasny1969'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://aziveibtbozkbs:00213dc440bbea72e2bf91df6b64b1d5765c52c9def5e5e04a76f4aa81a0d4d1@ec2-54-217-213-79.eu-west-1.compute.amazonaws.com:5432/d8ei5c1vou2be0'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://gkbsxkpzbbhbyc:33d091afcb98a86a8d2eb5e152476b23a0273070912ccc0b5aac203af3b41eb9@ec2-52-21-136-176.compute-1.amazonaws.com:5432/d2k3r64p8tfrjn'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 login_manager = LoginManager()
